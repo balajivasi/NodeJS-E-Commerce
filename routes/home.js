@@ -1,14 +1,9 @@
 const path = require("path");
 const express = require("express");
+const { getHomePage } = require("../controller/homeController");
 const router = express.Router();
-const rootDir=require('../utils/path')
 
-router.get("/", (req, res) => {
-  const viewData={
-    pageTitle:'Home page'
-  }
-  res.render('homePage',viewData)
-});
+router.get("/", getHomePage);
 
 module.exports = router;
  
