@@ -1,44 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('common/header.ejs') %> 
+<%- include('common/navigation.ejs') %>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    <%= pageTitle %>
-  </title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/main.css" />
-</head>
-
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link" href="/">Home</span></a>
-          <a class="nav-item nav-link active" href="/products">Products</span></a>
-          <a class="nav-item nav-link" href="/admin">Admin</a>
+    <main>
+      <div class="card">
+        <h5 class="card-header">Products Template</h5>
+        <div class="card-body">
+          <% for(let product of products) { %>
+            <div>
+              <%= product.title %>
+            </div>
+            <% } %>
         </div>
       </div>
-    </nav>
-  </header>
-  <main>
-    <div class="card">
-      <h5 class="card-header">Products Template</h5>
-      <div class="card-body">
-        <%= for()
-      </div>
-    </div>
-  </main>
-  <footer class="text-center text-lg-start badge-info  text-muted">2023 Copyright:</footer>
-</body>
-
-</html>
+    </main>
+    <%- include('common/footer.ejs') %>
