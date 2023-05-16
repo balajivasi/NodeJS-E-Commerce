@@ -16,7 +16,7 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">NodeJS-E-Commerce</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,7 +34,9 @@
     <div class="card">
       <h5 class="card-header">Products Template</h5>
       <div class="card-body">
-        <%= for()
+        <% for(let product of products) { %>
+          <div><%= product.title %></div>
+          <% } %>
       </div>
     </div>
   </main>
